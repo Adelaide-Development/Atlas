@@ -7,4 +7,15 @@
  * 
 */
 
+// Requires
 require('mongoose');
+
+// Main source code
+console.log("[ATLAS] ATTEMPTING STARTUP");
+
+try {
+    require("./src/js/handler.js");
+} catch (error) {
+    console.log(`[ATLAS] ${error}`);
+    return;
+}
