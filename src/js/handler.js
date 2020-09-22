@@ -1,7 +1,7 @@
 /*
  * ONE AMONG THE FENCE
  *
- * Atlas : Chandler.js
+ * Atlas : Handler.js
  *
  * Copyright (c) Cupertino Development 2020
  *
