@@ -1,2 +1,2 @@
 # Atlas
-Cupertino
+Cupertino's node.js API.
