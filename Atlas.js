@@ -7,15 +7,14 @@
  * 
 */
 
-// Requires
-require('mongoose');
+let LOGNAME = "ATLAS";
 
 // Main source code
-console.log("[ATLAS] ATTEMPTING STARTUP");
-
 try {
+    console.log(`[${LOGNAME}] COPYRIGHT CUPERTINO DEVELOPMENT 2020 \n[${LOGNAME}] ATTEMPTING STARTUP`);
+
+    // "Import" external files
     require("./src/js/handler.js");
-} catch (error) {
-    console.log(`[ATLAS] ${error}`);
-    return;
+} catch (e) {
+    console.log(`[${LOGNAME}] ${e}`);
 }
