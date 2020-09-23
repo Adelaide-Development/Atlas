@@ -8,9 +8,3 @@
 */
 
 let LOGNAME = "HANDLER";
-
-try {
-    console.log(`[${LOGNAME}] STARTING`);
-} catch(e) {
-    console.log(`[${LOGNAME}] ${e}`);
-}
