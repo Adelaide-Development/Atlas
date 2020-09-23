@@ -1,0 +1,22 @@
+{
+  "name": "atlas.js",
+  "version": "1.0.0",
+  "description": "The node.js API for Cupertino.",
+  "main": "Atlas.js",
+  "scripts": {
+    "test": "atlasTest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cupertino-Development/Atlas.git"
+  },
+  "keywords": [
+    "API"
+  ],
+  "author": "Cupertino Development",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Cupertino-Development/Atlas/issues"
+  },
+  "homepage": "https://github.com/Cupertino-Development/Atlas#readme"
+}
