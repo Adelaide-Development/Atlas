@@ -9,7 +9,7 @@
 
 // Main source code
 function sendToServer(data) {
-  if (arguments[1]) { return console.log("[ATLAS] Unexpected argument."); }
+  if (arguments[1]) { return console.error("[ATLAS] Unexpected argument."); }
   console.log(data);
 };
 
