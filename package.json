@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Cupertino-Development/Atlas/issues"
   },
-  "homepage": "https://github.com/Cupertino-Development/Atlas#readme"
+  "homepage": "https://github.com/Cupertino-Development/Atlas#readme",
+  "dependencies": {
+    "@cupertino-development/atlas.js": "0.0.1",
+    "atlas": "^1.0.0-alpha.0"
+  }
 }
