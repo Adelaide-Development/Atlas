@@ -10,12 +10,12 @@
 // Consts and Requires
 const { sendToServer } = require("./sendToServer.js");
 
-exports.sendMessage = function () {
-  let channel = arguments[0];
-  let content = arguments[1];
+function sendMessage(channel, content, extra) {
   if (!channel) { return console.log(`[ATLAS] No valid channel provided.`); }
   if (!content) { return console.log(`[ATLAS] No content provided.`); }
-  if (arguments[2]) { return console.log(`[ATLAS] Unexpected identifier: "` + arguments[2] + `"`); }
+  if (extra) { return console.log(`[ATLAS] Unexpected identifier: "` + extra + `"`); }
   const output = JSON.stringify({ CHANNEL: channel, MESSAGE_CONTENT: content });
   sendToServer(output);
 };
+
+exports.sendMessage = sendMessage;

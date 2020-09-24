@@ -4,6 +4,6 @@ Cupertino's node.js API.
 
 ONE AMONG THE FENCE
 
-## Npmjs org
+## NpmJS Organization
 
 [cupertino-development](https://www.npmjs.com/org/cupertino-development)

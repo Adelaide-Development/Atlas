@@ -7,7 +7,9 @@
  *
 */
 
-exports.sendToServer = function () {
+function sendToServer() {
   let post = arguments[0];
   console.log(post);
 };
+
+exports.sendToServer = sendToServer;
