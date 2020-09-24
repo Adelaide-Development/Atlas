@@ -7,12 +7,8 @@
  * 
 */
 
-let LOGNAME = "ATLAS";
+// Consts and Requires
+const { post } = require("./src/js/post.js");
 
-// Main source code
-exports.atlasTest = function() {
-    console.log("[ATLAS] TEST MESSAGE");
-}
-
-// "Import" external files
-require("./src/js/handler.js");
+// Exports
+exports.post = post;
