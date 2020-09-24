@@ -1,6 +1,6 @@
 {
   "name": "@cupertino-development/atlas",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "Cupertino's node.js API Wrapper.",
   "main": "Atlas.js",
   "scripts": {
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Cupertino-Development/Atlas/issues"
   },
-  "homepage": "https://github.com/Cupertino-Development/Atlas#readme"
+  "homepage": "https://github.com/Cupertino-Development/Atlas#readme",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  }
 }
