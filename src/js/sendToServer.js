@@ -7,9 +7,11 @@
  *
 */
 
-function sendToServer() {
-  let post = arguments[0];
-  console.log(post);
+// Main source code
+function sendToServer(data) {
+  if (arguments[1]) { return console.log("[ATLAS] Unexpected argument."); }
+  console.log(data);
 };
 
+// Exports
 exports.sendToServer = sendToServer;

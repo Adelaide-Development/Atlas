@@ -10,12 +10,14 @@
 // Consts and Requires
 const { sendToServer } = require("./sendToServer.js");
 
-function post(name, content, extra) {
+// Main source code
+function post(name, content) {
   if (!name) { return console.log(`[ATLAS] No name provided.`); }
   if (!content) { return console.log(`[ATLAS] No content provided.`); }
-  if (extra) { return console.log(`[ATLAS] Unexpected identifier: "` + extra + `"`); }
+  if (arguments[2]) { return console.log(`[ATLAS] Unexpected argument.`); }
   const output = JSON.stringify({ POST_NAME: name, POST_CONTENT: content });
   sendToServer(output);
 };
 
+// Exports
 exports.post = post;
