@@ -15,7 +15,7 @@ function sendMessage(channel, content) {
   if (!channel) { return console.error(`[ATLAS] No valid channel provided.`); }
   if (!content) { return console.error(`[ATLAS] No content provided.`); }
   if (arguments[2]) { return console.error(`[ATLAS] Unexpected argument.`); }
-  const output = JSON.stringify({ CHANNEL: channel, MESSAGE_CONTENT: content });
+  const output = JSON.stringify({ channelId: channel, content: content });
   sendToServer(output);
 };
 
