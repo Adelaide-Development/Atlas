@@ -11,12 +11,12 @@
 const { sendToServer } = require("./sendToServer.js");
 
 // Main source code
-function sendMessage(channel, content) {
-  if (!channel) { return console.error(`[ATLAS] No valid channel provided.`); }
+function sendMessage(channelId, content) {
+  if (!channelId) { return console.error(`[ATLAS] No valid channel provided.`); }
   if (!content) { return console.error(`[ATLAS] No content provided.`); }
   if (arguments[2]) { return console.error(`[ATLAS] Unexpected argument.`); }
-  const output = JSON.stringify({ CHANNEL: channel, MESSAGE_CONTENT: content });
-  sendToServer(output);
+  const output = JSON.stringify({ content, channelId });
+  sendToServer(output, "msg");
 };
 
 // Exports
