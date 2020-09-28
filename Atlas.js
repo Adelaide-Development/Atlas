@@ -10,6 +10,7 @@
 // Consts and Requires
 const { post } = require("./src/js/post.js")
 const { sendMessage } = require("./src/js/sendMessage.js")
+const { ping } = require("./src/js/ping.js")
 
 // Arg Handler
 if (process.argv[2]) {
@@ -19,3 +20,4 @@ if (process.argv[2]) {
 // Exports
 exports.post = post
 exports.sendMessage = sendMessage
+exports.ping = ping
