@@ -1,8 +1,12 @@
 {
   "name": "@cupertino-development/atlas",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Cupertino's node.js API Wrapper.",
   "main": "Atlas.js",
+  "private": false,
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +15,7 @@
     "url": "git+https://github.com/Cupertino-Development/Atlas.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Cupertino Development",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/Cupertino-Development/Atlas/issues"
