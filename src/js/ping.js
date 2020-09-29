@@ -11,10 +11,10 @@
 const fetch = require("node-fetch")
 
 // Main source code
-async function ping(result) {
-    fetch('http://cupertino-api.herokuapp.com/ping', { method: "Get" })
-    .then(res => res.json())
-    .then(json => {
+function ping(result) {
+    fetch('http://cupertino-api.herokuapp.com/ping', { 
+        method: "Get" 
+    }).then(res => res.json()).then(json => {
         return result(json)
     })
 }

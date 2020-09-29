@@ -8,7 +8,7 @@
  */
 
 // Consts and Requires
-const { sendToServer } = require("./sendToServer.js")
+const fetch = require("node-fetch")
 
 // Main source code
 function post(name, content) {
@@ -16,7 +16,6 @@ function post(name, content) {
   if (!content) { return console.error(`[ATLAS] No content provided.`) }
   if (arguments[2]) { return console.error(`[ATLAS] Unexpected argument.`) }
   const output = JSON.stringify({ content, name })
-  sendToServer(output, "post")
 };
 
 // Exports

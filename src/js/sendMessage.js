@@ -8,15 +8,25 @@
  */
 
 // Consts and Requires
-const { sendToServer } = require("./sendToServer.js");
+const fetch = require('node-fetch');
 
 // Main source code
-function sendMessage(channelId, content) {
-  if (!channelId) { return console.error(`[ATLAS] No valid channel provided.`) }
-  if (!content) { return console.error(`[ATLAS] No content provided.`) }
-  if (arguments[2]) { return console.error(`[ATLAS] Unexpected argument.`) }
+function sendMessage(channelId, content, token) {
   const output = JSON.stringify({ content, channelId })
-  sendToServer(output, "msg")
+  fetch(`http://cupertino-api.herokuapp.com/msg/new`, {
+    method: 'POST',
+    body: output,
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json'
+    },
+  }).then(res => res.json()).then(json => {
+    if (json.error_code) {
+      console.error(`Error code ${json.error_code}: ${json.msg}`)
+    } else {
+      return console.log("Success! Message sent.")
+    }
+  })
 };
 
 // Exports
