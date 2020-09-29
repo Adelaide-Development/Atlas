@@ -18,6 +18,6 @@ if (process.argv[2]) {
 }
 
 // Exports
-exports.post = post
+// exports.post = post
 exports.sendMessage = sendMessage
 exports.ping = ping

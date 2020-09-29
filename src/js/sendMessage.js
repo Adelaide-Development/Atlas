@@ -22,7 +22,7 @@ function sendMessage(channelId, content, token) {
     },
   }).then(res => res.json()).then(json => {
     if (json.error_code) {
-      console.error(`Error code ${json.error_code}: ${json.msg}`)
+      return console.error(`Error code: ${json.error_code} | ${json.msg}`)
     } else {
       return console.log("Success! Message sent.")
     }

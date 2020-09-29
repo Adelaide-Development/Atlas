@@ -1,6 +1,6 @@
 {
   "name": "@cupertino-development/atlas",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Cupertino's node.js API Wrapper.",
   "main": "Atlas.js",
   "private": false,

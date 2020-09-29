@@ -11,11 +11,22 @@
 const fetch = require("node-fetch")
 
 // Main source code
-function post(name, content) {
-  if (!name) { return console.error(`[ATLAS] No name provided.`) }
-  if (!content) { return console.error(`[ATLAS] No content provided.`) }
-  if (arguments[2]) { return console.error(`[ATLAS] Unexpected argument.`) }
-  const output = JSON.stringify({ content, name })
+function post(name, content, token) {
+  const output = JSON.stringify({ name, content })
+  fetch(`http://cupertino-api.herokuapp.com/post/new`, {
+    method: 'POST',
+    body: output,
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json'
+    },
+  }).then(res => res.json()).then(json => {
+    if (json.error_code) {
+      return console.error(`${json.msg}`)
+    } else {
+      return console.log("Success! Post created.")
+    }
+  })
 };
 
 // Exports
