@@ -35,7 +35,11 @@ class Message {
             } else {
                 console.log("Success! Message sent.")
             }
-            return result(json)
+            if (result) {
+                return result(json)
+            } else {
+                return console.log(json)
+            }
         })
     }
     

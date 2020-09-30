@@ -32,7 +32,11 @@ class Post {
             } else {
                 console.log("Success! Post created.")
             }
-            return result(json)
+            if (result) {
+                return result(json)
+            } else {
+                return console.log(json)
+            }
         })
     }
     

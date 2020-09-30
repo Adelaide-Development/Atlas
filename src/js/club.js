@@ -39,12 +39,11 @@ class Club {
         });
     }
 
-    /*
-    join(clubId, token, result) {
-        if (!clubId) return console.error("No description provided.")
+    join(club_id, token) {
+        if (!club_id) return console.error("No description provided.")
         if (!token) return console.error("No token provided.")
-        const output = JSON.stringify({ clubId })
-        fetch(`http://cupertino-api.herokuapp.com/club/join/@me`, {
+        const output = JSON.stringify({ club_id })
+        fetch(`https://cupertino-api.herokuapp.com/club/join/@me`, {
             method: "POST",
             body: output,
             headers: {
@@ -52,15 +51,14 @@ class Club {
                 "Content-Type": "application/json",
             },
         }).then((res) => res.json()).then((json) => {
-            if (json.error_code) {
-                return console.error(`Error code: ${json.error_code} | ${json.msg}`)
+            if (result) {
+                return result(json)
             } else {
-                return console.log(`Success! Club "` + name + `" has been created.`)
+                return console.log(json)
             }
-            return result(json)
-        });
+        })
     }
-    */
+
 }
 
 // Exports

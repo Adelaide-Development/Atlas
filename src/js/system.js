@@ -18,11 +18,15 @@ class System {
     constructor() {}
     
     ping(result) {
-        fetch("http://cupertino-api.herokuapp.com/ping", {
+        fetch("https://cupertino-api.herokuapp.com/ping", {
             method: "Get",
         }).then((res) => res.json()).then((json) => {
-            return result(json)
-        });
+            if (result) {
+                return result(json)
+            } else {
+                return console.log(json)
+            }
+        })
     }
 
 }
