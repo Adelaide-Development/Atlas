@@ -17,7 +17,7 @@ class Post {
 
     constructor() {}
 
-    create(name, content, token) {
+    create(name, content, token, result) {
         const output = JSON.stringify({ name, content });
         fetch(`http://cupertino-api.herokuapp.com/post/new`, {
             method: "POST",
@@ -28,10 +28,11 @@ class Post {
             },
         }).then((res) => res.json()).then((json) => {
             if (json.error_code) {
-                return console.error(`${json.msg}`)
+                console.error(`${json.msg}`)
             } else {
-                return console.log("Success! Post created.")
+                console.log("Success! Post created.")
             }
+            return result(json)
         })
     }
     

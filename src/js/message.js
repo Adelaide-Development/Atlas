@@ -17,7 +17,7 @@ class Message {
 
     constructor() {}
 
-    create(channelId, content, token) {
+    create(channelId, content, token, result) {
         if (!channelId) return console.error("No channel provided.")
         if (!content) return console.error("No content provided.")
         if (!token) return console.error("No token provided.")
@@ -31,10 +31,11 @@ class Message {
             },
         }).then((res) => res.json()).then((json) => {
             if (json.error_code) {
-                return console.error(`Error code: ${json.error_code} | ${json.msg}`)
+                console.error(`Error code: ${json.error_code} | ${json.msg}`)
             } else {
-                return console.log("Success! Message sent.")
+                console.log("Success! Message sent.")
             }
+            return result(json)
         })
     }
     

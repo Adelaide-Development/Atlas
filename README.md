@@ -1,9 +1,14 @@
-# Atlas
+# Atlas  
+Cupertino's Node.js API.    
+[Documentation](https://github.com/Cupertino-Development/docs/tree/master/Atlas)    
+# NOTE:  
+Every class method must return a value, like so:  
+    class example {
 
-Cupertino's node.js API.
+        constructor() {}
 
-ONE AMONG THE FENCE
+        test(name, result) {
+            return result(name)
+        }
 
-## NpmJS Organization
-
-[cupertino-development](https://www.npmjs.com/org/cupertino-development)
+    }

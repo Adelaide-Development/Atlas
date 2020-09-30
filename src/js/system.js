@@ -17,11 +17,11 @@ class System {
     
     constructor() {}
     
-    ping() {
+    ping(result) {
         fetch("http://cupertino-api.herokuapp.com/ping", {
             method: "Get",
         }).then((res) => res.json()).then((json) => {
-            return console.log(json)
+            return result(json)
         });
     }
 

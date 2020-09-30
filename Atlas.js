@@ -9,6 +9,7 @@
 
 "use strict";
 
+const Club = require("./src/js/club")
 const Message = require("./src/js/message");
 const Post = require("./src/js/post")
 const System = require("./src/js/system")
@@ -20,7 +21,10 @@ if (process.argv[2]) {
 
 // Exports
 module.exports = {
+    club: new Club(),
     message: new Message(),
+    msg: new Message(),
     post: new Post(),
-    system: new System()
+    system: new System(),
+    sys: new System()
 }
