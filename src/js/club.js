@@ -44,17 +44,21 @@ class Club {
         if (!token) return console.error("No token provided.")
         const output = JSON.stringify({ club_id })
         fetch(`https://cupertino-api.herokuapp.com/club/join/@me`, {
-            method: "POST",
+            method: "PATCH",
             body: output,
             headers: {
                 Authorization: `Bearer ${token}`,
                 "Content-Type": "application/json",
             },
-        }).then((res) => res.json()).then((json) => {
-            if (result) {
-                return result(json)
+        })
+        .then(res => res.json())
+        .catch(e => {
+          console.log(e)
+        }).then(json => {
+            if (json.error_code) {
+                console.log(`Error: ${json.error_code.toString(16)/*This is for the hex code instead of decimal value*/} ${json.msg}`)
             } else {
-                return console.log(json)
+                console.log(json)
             }
         })
     }
