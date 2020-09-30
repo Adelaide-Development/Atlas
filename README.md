@@ -8,8 +8,12 @@ class example {
 
     constructor() {}
 
-    test(name, result) {
-        return result(name)
+    test(number, result) {
+        if (result) {
+            return result(number)
+        } else {
+            return console.log(number)
+        }
     }
 
 }

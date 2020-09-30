@@ -19,7 +19,7 @@ class Post {
 
     create(name, content, token, result) {
         const output = JSON.stringify({ name, content });
-        fetch(`http://cupertino-api.herokuapp.com/post/new`, {
+        fetch(`https://cupertino-api.herokuapp.com/post/new`, {
             method: "POST",
             body: output,
             headers: {

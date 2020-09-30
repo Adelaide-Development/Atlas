@@ -22,7 +22,7 @@ class Message {
         if (!content) return console.error("No content provided.")
         if (!token) return console.error("No token provided.")
         const output = JSON.stringify({ content, channel_id })
-        fetch(`http://cupertino-api.herokuapp.com/msg/new`, {
+        fetch(`https://cupertino-api.herokuapp.com/msg/new`, {
             method: "POST",
             body: output,
             headers: {

@@ -22,7 +22,7 @@ class Club {
         if (!description) return console.error("No description provided.")
         if (!token) return console.error("No token provided.")
         const output = JSON.stringify({ name, description })
-        fetch(`http://cupertino-api.herokuapp.com/club/new`, {
+        fetch(`https://cupertino-api.herokuapp.com/club/new`, {
             method: "POST",
             body: output,
             headers: {
@@ -40,7 +40,7 @@ class Club {
     }
 
     join(club_id, token) {
-        if (!club_id) return console.error("No description provided.")
+        if (!club_id) return console.error("No club ID provided.")
         if (!token) return console.error("No token provided.")
         const output = JSON.stringify({ club_id })
         fetch(`https://cupertino-api.herokuapp.com/club/join/@me`, {
