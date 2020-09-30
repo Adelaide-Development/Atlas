@@ -17,7 +17,6 @@ class Message {
 
     constructor() {}
 
-<<<<<<< HEAD
     create(content, channel_id, token, result) {
         if (!channelId) return console.error("No channel provided.")
         if (!content) return console.error("No content provided.")
