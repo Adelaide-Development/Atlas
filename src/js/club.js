@@ -52,14 +52,15 @@ class Club {
             },
         })
         .then(res => res.json())
-        .catch(e => {
-          console.log(e)
-        }).then(json => {
+        .then(json => {
             if (json.error_code) {
                 console.log(`Error: ${json.error_code.toString(16)/*This is for the hex code instead of decimal value*/} ${json.msg}`)
             } else {
                 console.log(json)
             }
+        })
+        .catch(e => {
+          console.log(e)
         })
     }
 
