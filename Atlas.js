@@ -7,10 +7,11 @@
  * 
 */
 
-// Consts and Requires
-const { post } = require("./src/js/post.js")
-const { sendMessage } = require("./src/js/sendMessage.js")
-const { ping } = require("./src/js/ping.js")
+"use strict";
+
+const Message = require("./src/js/message");
+const Post = require("./src/js/post")
+const System = require("./src/js/system")
 
 // Arg Handler
 if (process.argv[2]) {
@@ -18,6 +19,8 @@ if (process.argv[2]) {
 }
 
 // Exports
-// exports.post = post
-exports.sendMessage = sendMessage
-exports.ping = ping
+module.exports = {
+    message: new Message(),
+    post: new Post(),
+    system: new System()
+}
