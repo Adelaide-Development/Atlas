@@ -13,6 +13,7 @@ const Club = require("./src/js/club")
 const Message = require("./src/js/message");
 const Post = require("./src/js/post")
 const System = require("./src/js/system")
+const User = require("./src/js/user")
 
 // Arg Handler
 if (process.argv[2]) {
@@ -26,5 +27,7 @@ module.exports = {
     msg: new Message(),
     post: new Post(),
     system: new System(),
-    sys: new System()
+    sys: new System(),
+    user: new User(),
+    usr: new User()
 }

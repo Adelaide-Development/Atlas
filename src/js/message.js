@@ -18,8 +18,8 @@ class Message {
     constructor() {}
 
     create(content, channel_id, token, result) {
-        if (!channelId) return console.error("No channel provided.")
         if (!content) return console.error("No content provided.")
+        if (!channel_id) return console.error("No channel provided.")
         if (!token) return console.error("No token provided.")
         const output = JSON.stringify({ content, channel_id })
         fetch(`https://cupertino-api.herokuapp.com/msg/new`, {

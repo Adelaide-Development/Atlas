@@ -35,11 +35,15 @@ class Club {
             } else {
                 console.log(`Success! Club "` + name + `" has been created with the id "` + json.id + `".`)
             }
-            return result(json)
+            if (result) {
+                return result(json)
+            } else {
+                return console.log(json)
+            }
         });
     }
 
-    join(club_id, token) {
+    join(club_id, token, result) {
         if (!club_id) return console.error("No club ID provided.")
         if (!token) return console.error("No token provided.")
         const output = JSON.stringify({ club_id })
@@ -50,17 +54,17 @@ class Club {
                 Authorization: `Bearer ${token}`,
                 "Content-Type": "application/json",
             },
-        })
-        .then(res => res.json())
-        .then(json => {
+        }).then(res => res.json()).then(json => {
             if (json.error_code) {
-                console.log(`Error: ${json.error_code.toString(16)/*This is for the hex code instead of decimal value*/} ${json.msg}`)
+                console.error(`Error Code: ${json.error_code} | ${json.msg}`)
             } else {
-                console.log(json)
+                console.log(`Club "${json.name}" has been joined.`)
             }
-        })
-        .catch(e => {
-          console.log(e)
+            if (result) {
+                return result(json)
+            } else {
+                return console.log(json)
+            }
         })
     }
 
