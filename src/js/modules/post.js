@@ -7,10 +7,10 @@
  *
 */
 
-"use strict";
+"use strict"
 
 // Consts and Requires
-const fetch = require("node-fetch");
+const fetch = require("node-fetch")
 
 // Main source code
 class Post {
@@ -18,7 +18,7 @@ class Post {
     constructor() {}
 
     create(name, content, token, result) {
-        const output = JSON.stringify({ name, content });
+        const output = JSON.stringify({ name, content })
         fetch(`https://cupertino-api.herokuapp.com/post/new`, {
             method: "POST",
             body: output,

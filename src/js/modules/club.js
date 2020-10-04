@@ -7,7 +7,7 @@
  *
 */
 
-"use strict";
+"use strict"
 
 // Consts and Requires
 const fetch = require("node-fetch")
@@ -40,7 +40,7 @@ class Club {
             } else {
                 return console.log(json)
             }
-        });
+        })
     }
 
     join(club_id, token, result) {
@@ -71,4 +71,4 @@ class Club {
 }
 
 // Exports
-module.exports = Club;
+module.exports = Club

@@ -1,8 +1,8 @@
 {
   "name": "@cupertino-development/atlas",
   "version": "0.0.8",
-  "description": "Cupertino's node.js API Wrapper.",
-  "main": "Atlas.js",
+  "description": "Cupertino's Node.js API Wrapper.",
+  "main": "src/js/Atlas.js",
   "private": false,
   "dependencies": {
     "node-fetch": "^2.6.1"

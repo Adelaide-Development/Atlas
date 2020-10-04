@@ -7,10 +7,10 @@
  *
 */
 
-"use strict";
+"use strict"
 
 // Consts and Requires
-const fetch = require("node-fetch");
+const fetch = require("node-fetch")
 
 // Main source code
 class System {
@@ -32,4 +32,4 @@ class System {
 }
 
 // Exports
-module.exports = System;
+module.exports = System

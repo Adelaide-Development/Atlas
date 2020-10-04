@@ -7,7 +7,7 @@
  *
 */
 
-"use strict";
+"use strict"
 
 // Consts and Requires
 const fetch = require("node-fetch")
@@ -65,4 +65,4 @@ class User {
 }
 
 // Exports
-module.exports = User;
+module.exports = User

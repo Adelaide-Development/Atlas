@@ -7,13 +7,14 @@
  * 
 */
 
-"use strict";
+"use strict"
 
-const Club = require("./src/js/club")
-const Message = require("./src/js/message");
-const Post = require("./src/js/post")
-const System = require("./src/js/system")
-const User = require("./src/js/user")
+// Consts and Requires
+const Club = require("./modules/club")
+const Message = require("./modules/message")
+const Post = require("./modules/post")
+const System = require("./modules/system")
+const User = require("./modules/user")
 
 // Arg Handler
 if (process.argv[2]) {
