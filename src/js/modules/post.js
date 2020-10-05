@@ -10,13 +10,22 @@
 "use strict"
 
 // Consts and Requires
-const fetch = require("node-fetch")
+const { Base, fetch } = require("./base")
 
 // Main source code
-class Post {
+class Post extends Base {
 
-    constructor() {}
+    constructor() {
+        super(Base)
+    }
 
+    /**
+     * Create Post
+     * @param String name 
+     * @param String content 
+     * @param String token 
+     * @param String result 
+    */
     create(name, content, token, result) {
         const output = JSON.stringify({ name, content })
         fetch(`https://cupertino-api.herokuapp.com/post/new`, {

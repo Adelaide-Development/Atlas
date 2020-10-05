@@ -7,16 +7,23 @@
  *
 */
 
-"use strict"
-
 // Consts and Requires
-const fetch = require("node-fetch")
+const { Base, fetch } = require("./base")
 
 // Main source code
-class Message {
+class Message extends Base {
 
-    constructor() {}
+    constructor() {
+        super(Base)
+    }
 
+    /**
+     * Create Message
+     * @param String content 
+     * @param String channel_id 
+     * @param String token 
+     * @param String result 
+    */
     create(content, channel_id, token, result) {
         if (!content) return console.error("No content provided.")
         if (!channel_id) return console.error("No channel provided.")

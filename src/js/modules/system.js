@@ -10,13 +10,19 @@
 "use strict"
 
 // Consts and Requires
-const fetch = require("node-fetch")
+const { Base, fetch } = require("./base")
 
 // Main source code
-class System {
+class System extends Base {
     
-    constructor() {}
+    constructor() {
+        super(Base)
+    }
     
+    /**
+     * Send Ping Request to Server
+     * @param String result 
+    */
     ping(result) {
         fetch("https://cupertino-api.herokuapp.com/ping", {
             method: "Get",

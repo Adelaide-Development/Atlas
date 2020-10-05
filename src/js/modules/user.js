@@ -10,13 +10,20 @@
 "use strict"
 
 // Consts and Requires
-const fetch = require("node-fetch")
+const { Base, fetch } = require("./base")
 
 // Main source code
-class User {
+class User extends Base {
 
-    constructor() { }
+    constructor() {
+        super(Base)
+    }
     
+    /**
+     * Get User Clubs
+     * @param String token 
+     * @param String result 
+    */
     clubs(token, result) {
         if (!token) { return console.error("No token provided.") }
         fetch(`https://cupertino-api.herokuapp.com/user/@me/clubs`, {
@@ -37,7 +44,14 @@ class User {
         })
     }
 
-    new(username, email, password, isBot) {
+    /**
+     * Create User
+     * @param String username 
+     * @param String email 
+     * @param String password 
+     * @param String isBot 
+    */
+    create(username, email, password, isBot) {
         if (!username) { return console.error("No username provided.") }
         if (!email || !email.includes("@")) { return console.error("No valid email provided.") }
         if (!password) { return console.error("No password provided.") }

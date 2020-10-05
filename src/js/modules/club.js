@@ -7,16 +7,23 @@
  *
 */
 
-"use strict"
-
 // Consts and Requires
-const fetch = require("node-fetch")
+const { Base, fetch } = require("./base")
 
 // Main source code
-class Club {
+class Club extends Base {
 
-    constructor() {}
+    constructor() {
+        super(Base)
+    }
 
+    /**
+     * Create Club
+     * @param String name 
+     * @param String description 
+     * @param String token 
+     * @param String result 
+    */
     create(name, description, token, result) {
         if (!name) return console.error("No name provided.")
         if (!description) return console.error("No description provided.")
@@ -43,6 +50,12 @@ class Club {
         })
     }
 
+    /**
+     * Join Club
+     * @param String club_id 
+     * @param String token 
+     * @param String result 
+    */
     join(club_id, token, result) {
         if (!club_id) return console.error("No club ID provided.")
         if (!token) return console.error("No token provided.")
