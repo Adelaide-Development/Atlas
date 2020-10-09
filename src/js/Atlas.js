@@ -1,4 +1,4 @@
-/*
+/**
  * ONE AMONG THE FENCE
  * 
  * Atlas : Atlas.js
