@@ -4,9 +4,13 @@ adelaide's Node.js API.
 # NOTE:  
 Every class method must return a value, like so:  
 ```
-class example {
+const Base = require("./base")
 
-    constructor() {}
+class example extends Base {
+
+    constructor() {
+        super(Base)
+    }
 
     test(number, result) {
         if (result) {
@@ -17,4 +21,6 @@ class example {
     }
 
 }
+
+module.exports = example
 ```
