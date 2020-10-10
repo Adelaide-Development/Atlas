@@ -3,9 +3,9 @@
  * 
  * Atlas : Atlas.js
  * 
- * Copyright (c) Cupertino Development 2020
+ * Copyright (c) Adelaide Development and Atlas' Authors / Contributors 2020-
  * 
-*/
+**/
 
 "use strict"
 

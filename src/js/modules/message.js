@@ -1,11 +1,11 @@
 /**
  * ONE AMONG THE FENCE
- *
- * Atlas : Message.js
- *
- * Copyright (c) Cupertino Development 2020
- *
-*/
+ * 
+ * Atlas : Atlas.js
+ * 
+ * Copyright (c) Adelaide Development and Atlas' Authors / Contributors 2020-
+ * 
+**/
 
 // Consts and Requires
 const { Base, fetch } = require("./base")
@@ -23,13 +23,13 @@ class Message extends Base {
      * @param String channel_id 
      * @param String token 
      * @param String result 
-    */
+    **/
     create(content, channel_id, token, result) {
         if (!content) return console.error("No content provided.")
         if (!channel_id) return console.error("No channel provided.")
         if (!token) return console.error("No token provided.")
         const output = JSON.stringify({ content, channel_id })
-        fetch(`https://cupertino-api.herokuapp.com/msg/new`, {
+        fetch(`https://adelaide-api.herokuapp.com/msg/new`, {
             method: "POST",
             body: output,
             headers: {

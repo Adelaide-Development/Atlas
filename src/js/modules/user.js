@@ -3,9 +3,9 @@
  *
  * Atlas : User.js
  *
- * Copyright (c) Cupertino Development 2020
+ * Copyright (c) Adelaide Development 2020
  *
-*/
+**/
 
 "use strict"
 
@@ -26,7 +26,7 @@ class User extends Base {
     */
     clubs(token, result) {
         if (!token) { return console.error("No token provided.") }
-        fetch(`https://cupertino-api.herokuapp.com/user/@me/clubs`, {
+        fetch(`https://adelaide-api.herokuapp.com/user/@me/clubs`, {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -50,14 +50,14 @@ class User extends Base {
      * @param String email 
      * @param String password 
      * @param String isBot 
-    */
+    **/
     create(username, email, password, isBot) {
         if (!username) { return console.error("No username provided.") }
         if (!email || !email.includes("@")) { return console.error("No valid email provided.") }
         if (!password) { return console.error("No password provided.") }
         if (!isBot) { isBot = FALSE }
         const output = JSON.stringify({ username, email, password, isBot })
-        fetch(`https://cupertino-api.herokuapp.com/user/@me/clubs`, {
+        fetch(`https://adelaide-api.herokuapp.com/user/@me/clubs`, {
             method: "POST",
             body: output,
             headers: {

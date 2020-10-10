@@ -1,11 +1,11 @@
 /**
  * ONE AMONG THE FENCE
- *
- * Atlas : Club.js
- *
- * Copyright (c) Cupertino Development 2020
- *
-*/
+ * 
+ * Atlas : Atlas.js
+ * 
+ * Copyright (c) Adelaide Development and Atlas' Authors / Contributors 2020-
+ * 
+**/
 
 // Consts and Requires
 const { Base, fetch } = require("./base")
@@ -23,13 +23,13 @@ class Club extends Base {
      * @param String description 
      * @param String token 
      * @param String result 
-    */
+    **/
     create(name, description, token, result) {
         if (!name) return console.error("No name provided.")
         if (!description) return console.error("No description provided.")
         if (!token) return console.error("No token provided.")
         const output = JSON.stringify({ name, description })
-        fetch(`https://cupertino-api.herokuapp.com/club/new`, {
+        fetch(`https://adelaide-api.herokuapp.com/club/new`, {
             method: "POST",
             body: output,
             headers: {
@@ -55,12 +55,12 @@ class Club extends Base {
      * @param String club_id 
      * @param String token 
      * @param String result 
-    */
+    **/
     join(club_id, token, result) {
         if (!club_id) return console.error("No club ID provided.")
         if (!token) return console.error("No token provided.")
         const output = JSON.stringify({ club_id })
-        fetch(`https://cupertino-api.herokuapp.com/club/join/@me`, {
+        fetch(`https://adelaide-api.herokuapp.com/club/join/@me`, {
             method: "PATCH",
             body: output,
             headers: {

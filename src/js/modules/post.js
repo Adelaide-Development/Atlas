@@ -1,11 +1,11 @@
 /**
  * ONE AMONG THE FENCE
- *
- * Atlas : Post.js
- *
- * Copyright (c) Cupertino Development 2020
- *
-*/
+ * 
+ * Atlas : Atlas.js
+ * 
+ * Copyright (c) Adelaide Development and Atlas' Authors / Contributors 2020-
+ * 
+**/
 
 "use strict"
 
@@ -25,10 +25,10 @@ class Post extends Base {
      * @param String content 
      * @param String token 
      * @param String result 
-    */
+    **/
     create(name, content, token, result) {
         const output = JSON.stringify({ name, content })
-        fetch(`https://cupertino-api.herokuapp.com/post/new`, {
+        fetch(`https://adelaide-api.herokuapp.com/post/new`, {
             method: "POST",
             body: output,
             headers: {

@@ -1,11 +1,11 @@
 /**
  * ONE AMONG THE FENCE
- *
- * Atlas : System.js
- *
- * Copyright (c) Cupertino Development 2020
- *
-*/
+ * 
+ * Atlas : Atlas.js
+ * 
+ * Copyright (c) Adelaide Development and Atlas' Authors / Contributors 2020-
+ * 
+**/
 
 "use strict"
 
@@ -22,9 +22,9 @@ class System extends Base {
     /**
      * Send Ping Request to Server
      * @param String result 
-    */
+    **/
     ping(result) {
-        fetch("https://cupertino-api.herokuapp.com/ping", {
+        fetch("https://adelaide-api.herokuapp.com/ping", {
             method: "Get",
         }).then((res) => res.json()).then((json) => {
             if (result) {

@@ -1,11 +1,11 @@
 /**
  * ONE AMONG THE FENCE
- *
- * Atlas : Base.js
- *
- * Copyright (c) Cupertino Development 2020
- *
-*/
+ * 
+ * Atlas : Atlas.js
+ * 
+ * Copyright (c) Adelaide Development and Atlas' Authors / Contributors 2020-
+ * 
+**/
 
 // Consts and Requires
 const fetch = require("node-fetch")
