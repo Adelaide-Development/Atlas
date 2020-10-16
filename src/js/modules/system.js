@@ -7,32 +7,30 @@
  * 
 **/
 
-"use strict"
-
 // Consts and Requires
-const { Base, fetch } = require("./base")
+const { Base, fetch } = require("./base");
 
 // Main source code
 class System extends Base {
     
     constructor() {
-        super(Base)
+        super(Base);
     }
     
     /**
      * Send Ping Request to Server
-     * @param String result 
+     * @param Function result 
     **/
     ping(result) {
         fetch("https://adelaide-api.herokuapp.com/ping", {
             method: "Get",
         }).then((res) => res.json()).then((json) => {
             if (result) {
-                return result(json)
+                return result(json);
             } else {
-                return console.log(json)
+                return console.log(json);
             }
-        })
+        });
     }
 
 }

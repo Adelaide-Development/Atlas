@@ -8,13 +8,13 @@
 **/
 
 // Consts and Requires
-const fetch = require("node-fetch")
+const fetch = require("node-fetch");
 
 // Main source code
 class Base {
 
     constructor() {
-        "use strict"
+        "use strict";
     }
 
 }

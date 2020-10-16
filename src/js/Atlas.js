@@ -7,18 +7,18 @@
  * 
 **/
 
-"use strict"
+"use strict";
 
 // Consts and Requires
-const Club = require("./modules/club")
-const Message = require("./modules/message")
-const Post = require("./modules/post")
-const System = require("./modules/system")
-const User = require("./modules/user")
+const Club = require("./modules/club");
+const Message = require("./modules/message");
+const Post = require("./modules/post");
+const System = require("./modules/system");
+const User = require("./modules/user");
 
 // Arg Handler
 if (process.argv[2]) {
-    return console.log("[ATLAS] Unexpected argument.")
+    return console.log("[ATLAS] Unexpected argument.");
 }
 
 // Exports

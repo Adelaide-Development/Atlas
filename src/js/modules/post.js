@@ -7,16 +7,14 @@
  * 
 **/
 
-"use strict"
-
 // Consts and Requires
-const { Base, fetch } = require("./base")
+const { Base, fetch } = require("./base");
 
 // Main source code
 class Post extends Base {
 
     constructor() {
-        super(Base)
+        super(Base);
     }
 
     /**
@@ -37,16 +35,16 @@ class Post extends Base {
             },
         }).then((res) => res.json()).then((json) => {
             if (json.error_code) {
-                console.error(`${json.msg}`)
+                console.error(`${json.msg}`);
             } else {
-                console.log("Success! Post created.")
+                console.log("Success! Post created.");
             }
             if (result) {
-                return result(json)
+                return result(json);
             } else {
-                return console.log(json)
+                return console.log(json);
             }
-        })
+        });
     }
     
 }

@@ -8,13 +8,13 @@
 **/
 
 // Consts and Requires
-const { Base, fetch } = require("./base")
+const { Base, fetch } = require("./base");
 
 // Main source code
 class Message extends Base {
 
     constructor() {
-        super(Base)
+        super(Base);
     }
 
     /**
@@ -25,10 +25,10 @@ class Message extends Base {
      * @param String result 
     **/
     create(content, channel_id, token, result) {
-        if (!content) return console.error("No content provided.")
-        if (!channel_id) return console.error("No channel provided.")
-        if (!token) return console.error("No token provided.")
-        const output = JSON.stringify({ content, channel_id })
+        if (!content) return console.error("No content provided.");
+        if (!channel_id) return console.error("No channel provided.");
+        if (!token) return console.error("No token provided.");
+        const output = JSON.stringify({ content, channel_id });
         fetch(`https://adelaide-api.herokuapp.com/msg/new`, {
             method: "POST",
             body: output,
@@ -38,16 +38,16 @@ class Message extends Base {
             },
         }).then((res) => res.json()).then((json) => {
             if (json.error_code) {
-                console.error(`Error code: ${json.error_code} | ${json.msg}`)
+                console.error(`Error code: ${json.error_code} | ${json.msg}`);
             } else {
-                console.log("Success! Message sent.")
+                console.log("Success! Message sent.");
             }
             if (result) {
-                return result(json)
+                return result(json);
             } else {
-                return console.log(json)
+                return console.log(json);
             }
-        })
+        });
     }
     
 }
