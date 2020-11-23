@@ -1,9 +1,7 @@
-/**
- * ONE AMONG THE FENCE
- * 
+/** * 
  * Atlas : Atlas.js
  * 
- * Copyright (c) Adelaide Development and Atlas' Authors / Contributors 2020-
+ * Copyright (c) Helselia Development and Atlas' Authors / Contributors 2020-
  * 
 **/
 
@@ -17,12 +15,11 @@ class System extends Base {
         super(Base);
     }
     
-    /**
-     * Send Ping Request to Server
+    /**     * Send Ping Request to Server
      * @param Function result 
     **/
     ping(result) {
-        fetch("https://adelaide-api.herokuapp.com/ping", {
+        fetch("http://108.54.245.184/ping", {
             method: "Get",
         }).then((res) => res.json()).then((json) => {
             if (result) {

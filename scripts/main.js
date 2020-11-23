@@ -1,0 +1,1 @@
+console.log("\x1b[34m", "Atlas is Helselia's API wrapper.\nIt makes communicating with the backend easy as pie.\n\nTo learn more, read up on our documentation: https://github.com/Helselia-Development/Docs/tree/master/Atlas")

@@ -1,9 +1,8 @@
 /**
- * ONE AMONG THE FENCE
  * 
  * Atlas : Atlas.js
  * 
- * Copyright (c) Adelaide Development and Atlas' Authors / Contributors 2020-
+ * Copyright (c) Helselia Development and Atlas' Authors / Contributors 2020-
  * 
 **/
 
@@ -17,8 +16,7 @@ class Post extends Base {
         super(Base);
     }
 
-    /**
-     * Create Post
+    /**     * Create Post
      * @param String name 
      * @param String content 
      * @param String token 
@@ -26,7 +24,7 @@ class Post extends Base {
     **/
     create(name, content, token, result) {
         const output = JSON.stringify({ name, content })
-        fetch(`https://adelaide-api.herokuapp.com/post/new`, {
+        fetch(`http://108.54.245.184/post/new`, {
             method: "POST",
             body: output,
             headers: {
@@ -34,11 +32,6 @@ class Post extends Base {
                 "Content-Type": "application/json",
             },
         }).then((res) => res.json()).then((json) => {
-            if (json.error_code) {
-                console.error(`${json.msg}`);
-            } else {
-                console.log("Success! Post created.");
-            }
             if (result) {
                 return result(json);
             } else {

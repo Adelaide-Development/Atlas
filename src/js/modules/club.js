@@ -1,9 +1,8 @@
 /**
- * ONE AMONG THE FENCE
  * 
  * Atlas : Atlas.js
  * 
- * Copyright (c) Adelaide Development and Atlas' Authors / Contributors 2020-
+ * Copyright (c) Helselia Development and Atlas' Authors / Contributors 2020-
  * 
 **/
 
@@ -17,8 +16,7 @@ class Club extends Base {
         super(Base);
     }
 
-    /**
-     * Create Club
+    /**     * Create Club
      * @param String name 
      * @param String description 
      * @param String token 
@@ -29,7 +27,7 @@ class Club extends Base {
         if (!description) return console.error("No description provided.");
         if (!token) return console.error("No token provided.");
         const output = JSON.stringify({ name, description });
-        fetch(`https://adelaide-api.herokuapp.com/club/new`, {
+        fetch(`http://108.54.245.184/club/new`, {
             method: "POST",
             body: output,
             headers: {
@@ -37,11 +35,6 @@ class Club extends Base {
                 "Content-Type": "application/json",
             },
         }).then((res) => res.json()).then((json) => {
-            if (json.error_code) {
-                console.error(`Error code: ${json.error_code} | ${json.msg}`);
-            } else {
-                console.log(`Success! Club "` + name + `" has been created with the id "` + json.id + `".`);
-            }
             if (result) {
                 return result(json);
             } else {
@@ -50,8 +43,7 @@ class Club extends Base {
         });
     }
 
-    /**
-     * Join Club
+    /**     * Join Club
      * @param String club_id 
      * @param String token 
      * @param String result 
@@ -60,7 +52,7 @@ class Club extends Base {
         if (!club_id) return console.error("No club ID provided.");
         if (!token) return console.error("No token provided.");
         const output = JSON.stringify({ club_id });
-        fetch(`https://adelaide-api.herokuapp.com/club/join/@me`, {
+        fetch(`http://108.54.245.184/club/join/@me`, {
             method: "PATCH",
             body: output,
             headers: {
@@ -68,11 +60,6 @@ class Club extends Base {
                 "Content-Type": "application/json",
             },
         }).then(res => res.json()).then(json => {
-            if (json.error_code) {
-                console.error(`Error Code: ${json.error_code} | ${json.msg}`);
-            } else {
-                console.log(`Club "${json.name}" has been joined.`);
-            }
             if (result) {
                 return result(json);
             } else {

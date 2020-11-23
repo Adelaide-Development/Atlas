@@ -1,9 +1,8 @@
 /**
- * ONE AMONG THE FENCE
  *
  * Atlas : User.js
  *
- * Copyright (c) Adelaide Development 2020
+ * Copyright (c) Helselia Development 2020
  *
 **/
 
@@ -17,23 +16,19 @@ class User extends Base {
         super(Base);
     }
     
-    /**
-     * Get User Clubs
+    /**     * Get User Clubs
      * @param String token 
      * @param String result 
     */
     clubs(token, result) {
         if (!token) { return console.error("No token provided."); }
-        fetch(`https://adelaide-api.herokuapp.com/user/@me/clubs`, {
+        fetch(`http://108.54.245.184/user/@me/clubs`, {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${token}`,
                 "Content-Type": "application/json",
             },
         }).then(res => res.json()).then(json => {
-            if (json.error_code) {
-                console.error(`Error Code: ${json.error_code} | ${json.msg}`);
-            } 
             if (result) {
                 return result(json);
             } else {
@@ -42,8 +37,7 @@ class User extends Base {
         });
     }
 
-    /**
-     * Create User
+    /**     * Create User
      * @param String username 
      * @param String email 
      * @param String password 
@@ -55,7 +49,7 @@ class User extends Base {
         if (!password) { return console.error("No password provided."); }
         if (!isBot) { isBot = FALSE; }
         const output = JSON.stringify({ username, email, password, isBot });
-        fetch(`https://adelaide-api.herokuapp.com/user/@me/clubs`, {
+        fetch(`http://108.54.245.184/user/@me/clubs`, {
             method: "POST",
             body: output,
             headers: {
@@ -63,9 +57,6 @@ class User extends Base {
                 "Content-Type": "application/json",
             },
         }).then(res => res.json()).then(json => {
-            if (json.error_code) {
-                console.error(`Error Code: ${json.error_code} | ${json.msg}`);
-            }
             if (result) {
                 return result(json);
             } else {

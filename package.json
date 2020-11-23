@@ -1,26 +1,27 @@
 {
-  "name": "@cupertino-development/atlas",
+  "name": "@Helselia-development/atlas",
   "version": "0.0.8",
-  "description": "Adelaide's Node.js API Wrapper.",
+  "description": "Helselia's Node.js API Wrapper.",
   "main": "src/js/Atlas.js",
   "private": false,
   "dependencies": {
     "node-fetch": "^2.6.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./scripts/test.js",
+    "start": "node ./scripts/main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Adelaide-Development/Atlas.git"
+    "url": "git+https://github.com/Helselia-Development/Atlas.git"
   },
   "keywords": [],
-  "author": "Adelaide Development and Atlas' Authors / Contributors",
+  "author": "Helselia Development and Atlas' Authors / Contributors",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Adelaide-Development/Atlas/issues"
+    "url": "https://github.com/Helselia-Development/Atlas/issues"
   },
-  "homepage": "https://github.com/Adelaide-Development/Atlas#readme",
+  "homepage": "https://github.com/Helselia-Development/Atlas#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   }

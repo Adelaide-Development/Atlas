@@ -1,9 +1,8 @@
 /**
- * ONE AMONG THE FENCE
  * 
  * Atlas : Atlas.js
  * 
- * Copyright (c) Adelaide Development and Atlas' Authors / Contributors 2020-
+ * Copyright (c) Helselia Development and Atlas' Authors / Contributors 2020-
  * 
 **/
 

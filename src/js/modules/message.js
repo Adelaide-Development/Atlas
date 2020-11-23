@@ -1,9 +1,8 @@
 /**
- * ONE AMONG THE FENCE
  * 
  * Atlas : Atlas.js
  * 
- * Copyright (c) Adelaide Development and Atlas' Authors / Contributors 2020-
+ * Copyright (c) Helselia Development and Atlas' Authors / Contributors 2020-
  * 
 **/
 
@@ -17,8 +16,7 @@ class Message extends Base {
         super(Base);
     }
 
-    /**
-     * Create Message
+    /**     * Create Message
      * @param String content 
      * @param String channel_id 
      * @param String token 
@@ -29,7 +27,7 @@ class Message extends Base {
         if (!channel_id) return console.error("No channel provided.");
         if (!token) return console.error("No token provided.");
         const output = JSON.stringify({ content, channel_id });
-        fetch(`https://adelaide-api.herokuapp.com/msg/new`, {
+        fetch(`http://108.54.245.184/msg/new`, {
             method: "POST",
             body: output,
             headers: {
@@ -37,11 +35,6 @@ class Message extends Base {
                 "Content-Type": "application/json",
             },
         }).then((res) => res.json()).then((json) => {
-            if (json.error_code) {
-                console.error(`Error code: ${json.error_code} | ${json.msg}`);
-            } else {
-                console.log("Success! Message sent.");
-            }
             if (result) {
                 return result(json);
             } else {

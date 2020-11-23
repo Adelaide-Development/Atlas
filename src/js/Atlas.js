@@ -1,9 +1,8 @@
 /**
- * ONE AMONG THE FENCE
  * 
  * Atlas : Atlas.js
  * 
- * Copyright (c) Adelaide Development and Atlas' Authors / Contributors 2020-
+ * Copyright (c) Helselia Development and Atlas' Authors / Contributors 2020-
  * 
 **/
 
@@ -24,9 +23,9 @@ if (process.argv[2]) {
 // Exports
 module.exports = {
     club: new Club(),
-    message: new Message(),
-    msg: new Message(),
-    post: new Post(),
+    // message: new Message(),
+    // msg: new Message(),
+    // post: new Post(), (commented out for lack of support)
     system: new System(),
     sys: new System(),
     user: new User(),
