@@ -7,7 +7,7 @@
 **/
 
 // Consts and Requires
-const { Base, fetch } = require("./base");
+const { Base, fetch, url } = require("../util/base");
 
 // Main source code
 class Message extends Base {
@@ -27,7 +27,7 @@ class Message extends Base {
         if (!channel_id) return console.error("No channel provided.");
         if (!token) return console.error("No token provided.");
         const output = JSON.stringify({ content, channel_id });
-        fetch(`http://108.54.245.184/msg/new`, {
+        fetch(url + `/msg/new`, {
             method: "POST",
             body: output,
             headers: {

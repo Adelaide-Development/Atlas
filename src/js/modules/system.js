@@ -6,7 +6,7 @@
 **/
 
 // Consts and Requires
-const { Base, fetch } = require("./base");
+const { Base, fetch, url } = require("../util/base");
 
 // Main source code
 class System extends Base {
@@ -19,8 +19,8 @@ class System extends Base {
      * @param Function result 
     **/
     ping(result) {
-        fetch("http://108.54.245.184/ping", {
-            method: "Get",
+        fetch(url + `/ping`, {
+            method: "GET",
         }).then((res) => res.json()).then((json) => {
             if (result) {
                 return result(json);
@@ -28,6 +28,17 @@ class System extends Base {
                 return console.log(json);
             }
         });
+    }
+
+    /**     * Get API URL
+     * @param Function result
+    */
+    url(result) {
+        if (result) {
+            return result(url);
+        } else {
+            return console.log(url);
+        }
     }
 
 }

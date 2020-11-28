@@ -7,7 +7,7 @@
 **/
 
 // Consts and Requires
-const { Base, fetch } = require("./base");
+const { Base, fetch, url } = require("../util/base");
 
 // Main source code
 class Post extends Base {
@@ -23,8 +23,8 @@ class Post extends Base {
      * @param String result 
     **/
     create(name, content, token, result) {
-        const output = JSON.stringify({ name, content })
-        fetch(`http://108.54.245.184/post/new`, {
+        const output = JSON.stringify({ name, content });
+        fetch(url + `post/new`, {
             method: "POST",
             body: output,
             headers: {

@@ -8,6 +8,7 @@
 
 // Consts and Requires
 const fetch = require("node-fetch");
+const url = "http://108.54.245.184";
 
 // Main source code
 class Base {
@@ -21,5 +22,6 @@ class Base {
 // Exports
 module.exports = {
     Base,
-    fetch
+    fetch,
+    url
 }

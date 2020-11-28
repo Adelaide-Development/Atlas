@@ -7,7 +7,7 @@
 **/
 
 // Consts and Requires
-const { Base, fetch } = require("./base");
+const { Base, fetch, url } = require("../util/base");
 
 // Main source code
 class User extends Base {
@@ -22,7 +22,7 @@ class User extends Base {
     */
     clubs(token, result) {
         if (!token) { return console.error("No token provided."); }
-        fetch(`http://108.54.245.184/user/@me/clubs`, {
+        fetch(url + `/user/@me/clubs`, {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -49,7 +49,7 @@ class User extends Base {
         if (!password) { return console.error("No password provided."); }
         if (!isBot) { isBot = FALSE; }
         const output = JSON.stringify({ username, email, password, isBot });
-        fetch(`http://108.54.245.184/user/@me/clubs`, {
+        fetch(url + `/user/@me/clubs`, {
             method: "POST",
             body: output,
             headers: {

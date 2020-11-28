@@ -23,6 +23,7 @@ if (process.argv[2]) {
 // Exports
 module.exports = {
     club: new Club(),
+    // The following is commented out because it is not present in Helselia's API
     // message: new Message(),
     // msg: new Message(),
     // post: new Post(), (commented out for lack of support)

@@ -7,7 +7,7 @@
 **/
 
 // Consts and Requires
-const { Base, fetch } = require("./base");
+const { Base, fetch, url } = require("../util/base");
 
 // Main source code
 class Club extends Base {
@@ -27,7 +27,7 @@ class Club extends Base {
         if (!description) return console.error("No description provided.");
         if (!token) return console.error("No token provided.");
         const output = JSON.stringify({ name, description });
-        fetch(`http://108.54.245.184/club/new`, {
+        fetch(url + `/club/new`, {
             method: "POST",
             body: output,
             headers: {
@@ -52,7 +52,7 @@ class Club extends Base {
         if (!club_id) return console.error("No club ID provided.");
         if (!token) return console.error("No token provided.");
         const output = JSON.stringify({ club_id });
-        fetch(`http://108.54.245.184/club/join/@me`, {
+        fetch(url + `/club/join/@me`, {
             method: "PATCH",
             body: output,
             headers: {
