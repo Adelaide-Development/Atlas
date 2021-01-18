@@ -1,7 +1,9 @@
 # Atlas  
 Helselia's Node.js API.    
-[Documentation](https://github.com/Helselia-Development/Docs/tree/master/Atlas)    
-# NOTE:  
+[Documentation](https://github.com/Helselia/Docs/tree/master/Atlas)    
+
+# NOTE  
+
 Every class method must return a value, like so:  
 ```
 const Base = require("./base")

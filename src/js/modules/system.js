@@ -13,6 +13,7 @@ class System extends Base {
     
     constructor() {
         super(Base);
+        this.name = "SYSTEM";
     }
     
     /**     * Send Ping Request to Server
@@ -22,11 +23,7 @@ class System extends Base {
         fetch(url + `/ping`, {
             method: "GET",
         }).then((res) => res.json()).then((json) => {
-            if (result) {
-                return result(json);
-            } else {
-                return console.log(json);
-            }
+            this.sendResult(json);
         });
     }
 
@@ -34,11 +31,11 @@ class System extends Base {
      * @param Function result
     */
     url(result) {
-        if (result) {
-            return result(url);
-        } else {
-            return console.log(url);
-        }
+        this.sendResult(json);
+    }
+
+    test(result) {
+        this.sendResult("jah");
     }
 
 }

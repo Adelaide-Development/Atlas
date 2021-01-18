@@ -14,6 +14,7 @@ class Club extends Base {
 
     constructor() {
         super(Base);
+        this.name = "CLUB";
     }
 
     /**     * Create Club
@@ -35,11 +36,7 @@ class Club extends Base {
                 "Content-Type": "application/json",
             },
         }).then((res) => res.json()).then((json) => {
-            if (result) {
-                return result(json);
-            } else {
-                return console.log(json);
-            }
+            this.sendResult(json);
         });
     }
 
@@ -60,11 +57,7 @@ class Club extends Base {
                 "Content-Type": "application/json",
             },
         }).then(res => res.json()).then(json => {
-            if (result) {
-                return result(json);
-            } else {
-                return console.log(json);
-            }
+            this.sendResult(json);
         });
     }
 

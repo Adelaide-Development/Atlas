@@ -8,13 +8,17 @@
 
 // Consts and Requires
 const fetch = require("node-fetch");
-const url = "http://108.54.245.184";
+const url = require("../../json/config.json");
 
 // Main source code
 class Base {
 
     constructor() {
         "use strict";
+    }
+
+    sendResult(res) {
+        if (this.result) { return this.result(res); } else { return console.log(res); }
     }
 
 }

@@ -14,6 +14,7 @@ class Post extends Base {
 
     constructor() {
         super(Base);
+        this.name = "POST";
     }
 
     /**     * Create Post
@@ -32,11 +33,7 @@ class Post extends Base {
                 "Content-Type": "application/json",
             },
         }).then((res) => res.json()).then((json) => {
-            if (result) {
-                return result(json);
-            } else {
-                return console.log(json);
-            }
+            this.sendResult(json);
         });
     }
     

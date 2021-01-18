@@ -14,10 +14,12 @@ const Message = require("./modules/message");
 const Post = require("./modules/post");
 const System = require("./modules/system");
 const User = require("./modules/user");
+const Base = require("./util/base");
+const b = new Base.Base();
 
 // Arg Handler
 if (process.argv[2]) {
-    return console.log("[ATLAS] Unexpected argument.");
+    b.sendResult("You cannot pass any arguments from the command line.");
 }
 
 // Exports
